@@ -51,6 +51,23 @@ botonConsulta.addEventListener('click', (evento) => {
     const nombreTitular = inputTitular.value; 
     const cuentaEncontrada = buscarCuenta(nombreTitular);
     if (cuentaEncontrada) {
+        const container = document.querySelector('#contenedor-datos-user')
+
+        container.innerHTML = `<h2>${cuentaEncontrada.titular}</h2>
+                                <h3>${cuentaEncontrada.contacto}</h3>
+                                <h4>${cuentaEncontrada.saldo}</h4>`
+
+                                datos.forEach((cuentaEncontrada) =>{
+                                    tabla.innerHTML += `
+                                    <tr id = 'info'>
+                                    <th>${counter}</th>
+                                    <td>${cuentaEncontrada.titular} </td>
+                                    <td>${cuentaEncontrada.contacto} </td>
+                                    <td>${cuentaEncontrada.saldo} </td>
+                                    </tr>
+                                    `;
+                                    counter ++;
+                                });
         
         titular.value = cuentaEncontrada.titular;
         contacto.value = cuentaEncontrada.contacto;
