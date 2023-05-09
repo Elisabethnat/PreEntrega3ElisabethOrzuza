@@ -55,19 +55,26 @@ botonConsulta.addEventListener('click', (evento) => {
 
         container.innerHTML = `<h2>${cuentaEncontrada.titular}</h2>
                                 <h3>${cuentaEncontrada.contacto}</h3>
-                                <h4>${cuentaEncontrada.saldo}</h4>`
+                                <h4>${cuentaEncontrada.saldo}</h>`
 
-                                datos.forEach((cuentaEncontrada) =>{
-                                    tabla.innerHTML += `
-                                    <tr id = 'info'>
-                                    <th>${counter}</th>
-                                    <td>${cuentaEncontrada.titular} </td>
-                                    <td>${cuentaEncontrada.contacto} </td>
-                                    <td>${cuentaEncontrada.saldo} </td>
-                                    </tr>
-                                    `;
-                                    counter ++;
-                                });
+
+                                //function mostrarCuentas(){
+                                   // const tabla = document.getElementById('cuentas');
+                                    //tabla.innerHTML = ``;
+                                
+                                    //cuentas.forEach(({nombre,cantidad,precio}) => {
+                                        //tabla.innerHTML += `
+                                            //<tr>
+                                               // <th>${counter}</th>
+                                               // <td>${titular} </td>
+                                               // <td>${contacto} </td>
+                                               // <td>${saldo} </td>
+                                            //</tr>
+                                       //`;
+                                        //counter++;
+                                       // console.log(tabla.innerHTML);
+                                   // });
+                                //}
         
         titular.value = cuentaEncontrada.titular;
         contacto.value = cuentaEncontrada.contacto;
